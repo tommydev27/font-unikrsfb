@@ -23,12 +23,6 @@
       padding: 5px;
     }
 
-    h1 {
-      text-align:  ;
-      color: #333;
-      font-size: 27px;
-    }
-
     .deskripsi-container {
       background: #fff;
       padding: 22px;
@@ -60,8 +54,8 @@
 
     .kolom button {
       margin-top: 8px;
-      padding: 5px 18px;
-      font-size: 18px;
+      padding: 5px 40px;
+      font-size: 15px;
       background: #007bff;
       color: white;
       border: none;
@@ -129,14 +123,13 @@ button, a, input, textarea {
 </head>
 <body>
 
-  <h1>Font name fb unikers</h1>
 
-  <h3 style="margin-top: -10px;">
-<div style="display: flex; gap: 12px; color: #707170; font-size: 20px; ">
+  <h3 style="margin-top: 0px;">
+<div style="display: flex; gap: 12px; color: #007bff; font-size: 20px; ">
   
-      <span class="native-text" style="color:#575252; font-size: 17.8px !important; font-weight: bold;">Tommy website</span>
+      <span class="native-text" style="color:#575252; font-size: 16px !important; font-weight: bold;">Tommy website</span>
   
-      <span class="native-text" style="color:#1b74e4; font-size: 16px; vertical-align: 1px; font-weight: normal; margin-left: -10px;">󱢏</span>
+      <span class="native-text" style="color:#1b74e4; font-size: 14px; margin-top: 2px; vertical-align: 1px; font-weight: normal; margin-left: -9px;">󱢏</span>
       
 <!-- Tambahkan ini di <head> -->
 
@@ -145,21 +138,6 @@ button, a, input, textarea {
     <i class="fab fa-facebook"></i>
   </a>
 
-  <a href="https://instagram.com" target="_blank" title="Buka Instagram"
-     style="text-decoration: none; color: inherit; cursor: pointer;">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://wa.me/6281234567890" target="_blank" title="Kirim WhatsApp"
-     style="text-decoration: none; color: inherit; cursor: pointer;">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <a href="#" onclick="navigator.share ? navigator.share({title: 'Bagikan', url: window.location.href}) : alert('Peramban tidak mendukung share'); return false;"
-     title="Bagikan Halaman Ini"
-     style="text-decoration: none; color: inherit; cursor: pointer;">
-    <i class="fa fa-share"></i>
-  </a>
 </div>
   <p style="color: #575252; font-size: 12; font-weight: normal; margin-top: 5px; margin-bottom: -10px;">font versi fb lite</p>
 
@@ -186,7 +164,7 @@ button, a, input, textarea {
 
 <div class="deskripsi-container">
   <div class="kolom">
-     <div class="kolom">
+
      <textarea id="kolom51">™⚘ꕤ ۩۞─────۞
 ✧╔══❖≛≛❖══╗
 ♧䷓䷚䷓䷃♡䷏䷃䷓䷃
@@ -589,19 +567,112 @@ NAME</textarea>
 ──────────
 FﾑCﾓB✪✪K  󰍸 󰍺 󰎐</textarea>
     <button onclick="copyToClipboard('kolom46')">⧉</button>
-  </div>
-</div>
 
 
-  <script>
-    function copyToClipboard(id) {
-      const textarea = document.getElementById(id);
-      textarea.select();
-      textarea.setSelectionRange(0, 99999); 
-      document.execCommand("copy");
-      alert("Disalin: " + textarea.value);
-    }
-  </script>
+<script>
+function copyToClipboard(id) {
+  const source = document.getElementById(id);
+  
+  // Buat textarea sementara (agar tidak munculkan keyboard)
+  const temp = document.createElement("textarea");
+  temp.value = source.value;
+  temp.setAttribute("readonly", "");
+  temp.style.position = "absolute";
+  temp.style.left = "-9999px";
+  document.body.appendChild(temp);
+  temp.select();
+  document.execCommand("copy");
+  document.body.removeChild(temp);
 
-</body>
-</html>
+  // Cek apakah elemen copy-message sudah ada
+  let copyMsg = document.getElementById("copy-message");
+  if (!copyMsg) {
+    copyMsg = document.createElement("span");
+    copyMsg.id = "copy-message";
+    copyMsg.innerHTML = `
+      Berhasil disalin!
+      <svg id="check-icon" viewBox="0 0 52 52" class="checkmark">
+        <path class="checkmark__circle" d="M26,1 a25,25 0 1,0 0.00001,0" />
+        <path class="checkmark__check" d="M14 27 l7 7 l17 -17" />
+      </svg>
+    `;
+    document.body.appendChild(copyMsg);
+
+    // Tambahkan gaya lewat JS
+    const style = document.createElement("style");
+    style.textContent = `
+      #copy-message {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        font-size: 15px;
+        transform: translate(-50%, -50%);
+        background: #222;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: ;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 9999;
+      }
+
+      #copy-message.show {
+        opacity: 1;
+      }
+
+      .checkmark {
+        width: 24px;
+        height: 24px;
+        stroke: lime;
+        stroke-width: 3;
+        stroke-linecap: round;
+        fill: none;
+      }
+
+      .checkmark__circle {
+        stroke-dasharray: 157;
+        stroke-dashoffset: 157;
+        animation: dash 0.5s ease-out forwards;
+      }
+
+      .checkmark__check {
+        stroke-dasharray: 36;
+        stroke-dashoffset: 36;
+        animation: dash-check 0.3s 0.5s ease-out forwards;
+      }
+
+      #copy-message:not(.show) .checkmark__circle,
+      #copy-message:not(.show) .checkmark__check {
+        stroke-dashoffset: 157;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes dash-check {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // Tampilkan animasi
+  copyMsg.classList.remove("show");
+  void copyMsg.offsetWidth;
+  copyMsg.classList.add("show");
+
+  setTimeout(() => {
+    copyMsg.classList.remove("show");
+  }, 2000);
+}
+</script>
+
