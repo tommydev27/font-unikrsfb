@@ -99,6 +99,31 @@
       font-size: 12px;
       margin-top: 5px;
     }
+    
+    /* Hilangkan highlight biru di iOS dan abu-abu di Android */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Nonaktifkan seleksi teks */
+* {
+  user-select: none;
+}
+
+/* Hilangkan outline saat klik/tap */
+*:focus {
+  outline: none;
+}
+
+/* Jika pakai button/a/input, nonaktifkan tampilan default */
+button, a, input, textarea {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
 
   </style>
 </head>
@@ -162,24 +187,24 @@
 <div class="deskripsi-container">
   <div class="kolom">
      <div class="kolom">
-     <textarea id="kolom51">™⚘ꕤ ۩۞──────۞
-✧╔══❖≛≛❖══╗✧
-♧䷓䷚䷓䷃♡䷏䷃䷓䷃♧
-✧╚══❖≛≛❖══╝✧
-™⚘ꕤ ۩۞──────۞</textarea>
-    <button onclick="copyToClipboard('kolom1')">⧉</i></button>
+     <textarea id="kolom51">™⚘ꕤ ۩۞─────۞
+✧╔══❖≛≛❖══╗
+♧䷓䷚䷓䷃♡䷏䷃䷓䷃
+✧╚══❖≛≛❖══╝
+®⚘ꕤ ۩۞─────۞</textarea>
+    <button onclick="copyToClipboard('kolom51')">⧉</i></button>
   </div>
      <div class="kolom">
       <textarea id="kolom52">♧🅚ⓐⓡⓞ 🅑ⓞⓙⓞ⠀🎵🎶
 ─────ꔷ──── ﾛﾛ⠘ﾖﾕ
 ⏮️　　⏸️　　⏭️　⠀🔀🔄</textarea>
-    <button onclick="copyToClipboard('kolom1')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom52')">⧉</i></button>
   </div>
      <div class="kolom">
       <textarea id="kolom53">──ꔷ⬣★◥╲☠️╱◤★⬣ꔷ──
 ✶❖✶ﾆ䷏䷃䷓䷚䷞䷃䷓ﾆ✶❖✶
 ──ꔷ⬣★◢◤⚙◥◣★⬣ꔷ──</textarea>
-    <button onclick="copyToClipboard('kolom1')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom53')">⧉</i></button>
   </div>
       <div class="kolom">
        <textarea id="kolom54">┏╮╭┒▛▚▁▞▜┏╮╭┒
@@ -187,7 +212,7 @@
 ╭▚▞╮▞▚▁▞▚╭▚▞╮
 ┕╯╰┙▙▞▔▚▟┕╯╰┙
 ﾓMｴNﾓM</textarea>
-    <button onclick="copyToClipboard('kolom1')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom54')">⧉</i></button>
   </div>
      <div class="kolom">
     <textarea id="kolom1">┬☬╮GﾓMｴNｴ♕ 　🂡🃞⍀⚃
