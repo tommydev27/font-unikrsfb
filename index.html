@@ -12,22 +12,23 @@
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="1245016886587008">
     
-    <title>Tommy Website</title>
-        <link rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v5/y2/l/0,cross/nC2XYYUISfm.css" crossorigin="anonymous">
+  <title>Tommy Website</title>
+    <link rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v5/y2/l/0,cross/nC2XYYUISfm.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v5/y8/l/0,cross/Z39OoPuXzgz.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://static.xx.fbcdn.net/rsrc.php/v5/yv/l/0,cross/VraZqV-tU8r.css" rel="stylesheet" crossorigin="anonymous" />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  
   <style>
     body {
       font-family:'CustomFont','Arial','Segoe UI','Noto Sans',sans-serif;
-      background: #eaf5f7;
+      background: #222;
       padding: 5px;
-      border: 1px solid #26a9a3;
+      border: 0.5px solid #777;
       border-radius: 5px;
     }
 
@@ -42,38 +43,42 @@
       margin-bottom: 20px;
     }
 
-      .kolom textarea {
-        width: 100%;
-        font-family: 'CustomFont', 'Arial', 'Segoe UI', 'Noto Sans', sans-serif;
-        min-height: 130px;
-        padding: 5px;
-        font-size: 17px;
-        border: 1px solid #26a9a3;
-        border-radius: 6px;
-        resize: none;
-        box-sizing: border-box;
-        overflow: hidden;
-        user-select: none;
-        pointer-events: none;
-      background: #fff;
-      }
+/* Textarea & Native Text */
+.kolom textarea,
+.kolom .native-text {
+  width: 100%;
+  font-family: 'CustomFont', 'Arial', 'Segoe UI', 'Noto Sans', sans-serif;
+  min-height: 130px;
+  padding: 5px;
+  font-size: 17px;
+  border: 0.5px solid #777;
+  border-radius: 6px;
+  resize: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  background: #333;
+  color: #fff;
+  display: block;
+  white-space: pre-wrap; /* biar teks span rapi multiline */
+}
 
+/* Tombol */
+.kolom button {
+  margin-top: 8px;
+  padding: 5px 40px;
+  font-size: 15px;
+  background: #9e0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.kolom button:hover {
+  background: #f20808;
+}
 
-    .kolom button {
-      margin-top: 8px;
-      padding: 5px 40px;
-      font-size: 15px;
-      background: #26a9a3;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .kolom button:hover {
-      background: #0056b3;
-    }
-    
     .icon-bar {
       display: flex;
       justify-content:  ;
@@ -125,44 +130,80 @@ button, a, input, textarea {
   outline: none;
 }
 
-
+    header{padding:5px 0px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:center; font-family:Normal; margin-bottom: 0px;}
+    header h1{font-size:16px;margin:0;font-weight:700; color:#fff; }
+    header .badge{font-size:11px;color:#02c302; background:#0a0a0a;border:1px solid #123a18;padding:2px 6px;border-radius:999px}
   </style>
   
 </head>
 <body>
+     <header>
+    <h1>Catatan</h1>
+    <span class="badge">font • icon • unicode character</span>
+  </header>
 
-
-  <h3 style="margin-top: 0px; background: #fff; padding: 10px; border: 1px solid #26a9a3; border-radius: 5px;">
+  <h3 style="margin-top: 0px; background: #111; padding: 10px; border: 1px solid #777; border-radius: 5px;">
 <div style="display: flex; gap: 10px; ">
   
-      <span class="native-text" style="color:#26a9a3; font-size: 20px !important; font-weight: bold;">Rangkaian font teks unik</span>
+      <span class="native-text" style="color:#fff; font-size: 16px !important; font-weight: bold;">Rangkaian font teks unik</span>
   
 </div>
-<p style="color: #333; font-size: 15px; font-weight: normal; margin-top: 5px;">untuk tampilan penuh dan rapi copy & dan pastekan di fb lite / font versi lite</p>
+<p style="color: #fff; font-size: 12px; font-weight: normal; margin-top: 5px;">untuk tampilan penuh dan rapi copy & dan pastekan di fb lite / font versi lite</p>
 
     </h3>
       
 <div class="deskripsi-container">
+  <div class="kolom">
+    <textarea id="kolom13">┈┉✿╮🔶🅹🔶╭✿┉┈
+┏╮╭┪❗🅴❗┢╮╭┓
+╰▞▚╯❗🅽❗╰▞▚╯
+╭▚▞╮❗🆈❗╭▚▞╮
+┗╯╰┹🔶ﾆﾆ🔶┺╯╰┛</textarea>
+    <button onclick="copyToClipboard('kolom13')">Copy ⧉</button>
+  </div>
+    <div class="kolom">
+    <textarea id="kolom4">┮😘⭐➖────➖➛
+╰⪛⪜╮⟣───◂ﾆ►🦄🪽
+⪻🎡⪼◂🆅🅴🅼🆈▸⪻🎡⪼
+╭⫹⫺╯⟣───◂ﾆ►🐴🪽
+┶😘⭐➖────➖➛</textarea>
+    <button onclick="copyToClipboard('kolom4')">Copy ⧉</button>
+  </div>
+    <div class="kolom">
+    <textarea id="kolom48">╭◖◫🀁☐▇▇▇▇▇☐🀁⌷⌷⌷►
+╰──◂ﾆ🅢🅐🅢🅤🅚🅔ﾆ▸──╮
+◄⌷⌷⌷🀁☐▇▇▇▇▇☐🀁◫◗╯
+⎝҂⚆⏝⚆⍀⎠⚘㎯⚤✾⍻───➛</textarea>
+    <button onclick="copyToClipboard('kolom48')">Copy ⧉</button>
+  </div>
+  <div class="kolom">
+    <textarea id="kolom49">▛▔▔▚✿╮╭✿▞▔▔▜
+▚🔴╱◤╱✿╲◥╲🔴▞
+─◈◈✿GﾓMｴNｴ✿◈◈─
+▞🔴╲◣╲✿╱◢╱🔴▚
+▙▂▂▞✿╯╰✿▚▂▂▟</textarea>
+    <button onclick="copyToClipboard('kolom49')">Copy ⧉</button>
+  </div>
   
     <div class="kolom">
     <textarea id="kolom20">⛅ ╱⧸╲𝀓𝀲⧹╲
 𝀲𝀻𝀈𝁵𝀓▁🎄🏠⏜🏡
 🎄━🚴‍♂️━╍🚴‍♀️╍╍┅┉┉┉
 ﾆ🅂🄴🄻🄰🄼🄰🅃 🄿🄰🄶🄸ﾆ🎄</textarea>
-    <button onclick="copyToClipboard('kolom20')">⧉</button>
+    <button onclick="copyToClipboard('kolom20')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom21">╭🔴╮🎱★➻─────═❥
 ╰🟡╯🔶║⚝GﾓMｴNｴ║🔷
 ╭🟢─🎱★➻─────═❥</textarea>
-    <button onclick="copyToClipboard('kolom21')">⧉</button>
+    <button onclick="copyToClipboard('kolom21')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom22">⚜️🌺⚜️⏜⎞🪷⎛⏜⚜️🌺⚜️
 ╰⎛🌀⎞🔯🅕🅑🅘🔯⎛🌀⎞╯
 ╭⎝🌀⎠🔯🅒🅔🅞🔯⎝🌀⎠╮
 ╰⬣◖◤◢█ニニ█◣◥◗⬣╯</textarea>
-    <button onclick="copyToClipboard('kolom22')">⧉</button>
+    <button onclick="copyToClipboard('kolom22')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom23">┈▕▔╲ 
@@ -171,62 +212,40 @@ button, a, input, textarea {
 ▉┈┈▕▂▂▏💬
 ▉┈┈▕▂▂▏🔔
 ▔╲▂▕▁▁▏ニ</textarea>
-    <button onclick="copyToClipboard('kolom23')">⧉</button>
+    <button onclick="copyToClipboard('kolom23')">Copy ⧉</button>
   </div>
        <div class="kolom">
     <textarea id="kolom1">┬☬╮GﾓMｴNｴ♕ 　🂡🃞⍀⚃
 ╰⚘㎯⚤✾⍻───────➛
 ╭Ⴖ╰𝀀🅫𝀁°®⌢➷㉣㉧㉣㋦♤</textarea>
-    <button onclick="copyToClipboard('kolom1')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom1')">Copy ⧉</i></button>
   </div>
   
-    <div class="kolom">
-    <textarea id="kolom48">╭◖◫🀁☐▇▇▇▇▇☐🀁⌷⌷⌷►
-╰──◂ﾆ🅢🅐🅢🅤🅚🅔ﾆ▸──╮
-◄⌷⌷⌷🀁☐▇▇▇▇▇☐🀁◫◗╯
-⎝҂⚆⏝⚆⍀⎠⚘㎯⚤✾⍻───➛</textarea>
-    <button onclick="copyToClipboard('kolom48')">⧉</button>
-  </div>
-  <div class="kolom">
-    <textarea id="kolom49">▛▔▔▚✿╮╭✿▞▔▔▜
-▚🔴╱◤╱✿╲◥╲🔴▞
-─◈◈✿GﾓMｴNｴ✿◈◈─
-▞🔴╲◣╲✿╱◢╱🔴▚
-▙▂▂▞✿╯╰✿▚▂▂▟</textarea>
-    <button onclick="copyToClipboard('kolom49')">⧉</button>
-  </div>
       <div class="kolom">
     <textarea id="kolom47">╭✫﷽⚘❂────────❂❥
 ╰─💱❥Ⓕⓐⓒⓔⓑⓞⓞⓚ❥⚝╮
 ™╭🎱ﾆ☬⚘⚁⚄⚁⚄⚅⚘☬ﾆ®</textarea>
-    <button onclick="copyToClipboard('kolom47')">⧉</button>
+    <button onclick="copyToClipboard('kolom47')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom50">🍁ꕤ➻────────➻❥
 ║🇺║🇸║🇪║🇷║❥⚝╮
 🍁ꕤ➻────────➻❤️</textarea>
-    <button onclick="copyToClipboard('kolom50')">⧉</button>
+    <button onclick="copyToClipboard('kolom50')">Copy ⧉</button>
   </div>
-    <div class="kolom">
-    <textarea id="kolom4">┮😘⭐➖────➖➛
-╰⪛⪜╮⟣───◂ﾆ►🦄🪽
-⪻🎡⪼◂🆅🅴🅼🆈▸⪻🎡⪼
-╭⫹⫺╯⟣───◂ﾆ►🐴🪽
-┶😘⭐➖────➖➛</textarea>
-    <button onclick="copyToClipboard('kolom4')">⧉</button>
-  </div>
+
   <div class="kolom">
     <textarea id="kolom2">───⊡┳━┳⌫⌱
 ▃▁🝛⏍ﾛ🁢🆊🁢▅┯┯─⍻╼━
 ◤▔𝀺°𝀀𝀁▔▔▔▔𝀀▀▀𝀁乀 
 </textarea>
-    <button onclick="copyToClipboard('kolom2')">⧉</button>
+    <button onclick="copyToClipboard('kolom2')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom3">╰✯㏒㍴❂──────➻❥
 ┤⣿🀄⣿℡⌢➷⎝⍀⚆🜳⚆҂⎠
 ╭◖ﾆ🂡ﾆ◗❂──────➻❥</textarea>
-    <button onclick="copyToClipboard('kolom3')">⧉</button>
+    <button onclick="copyToClipboard('kolom3')">Copy ⧉</button>
   </div>
   <div class="kolom">
   <textarea id="kolom55">─━⿴​▛◣🔶◢▜⿴​━─
@@ -234,26 +253,31 @@ button, a, input, textarea {
 ❖ﾆ🔶䷟䷚䷛䷃䷖​🔶ﾆ❖
 ◥▚╱◢▚🟥▞◣╲▞◤
 ─━⿴▙◤🔶◥▟⿴​━─</textarea>
-  <button onclick="copyToClipboard('kolom55')">⧉</button>
+  <button onclick="copyToClipboard('kolom55')">Copy ⧉</button>
 </div>
+
+
 <div class="kolom">
-  <textarea id="kolom56">┏󰦒󰢜╱◢◤◢◤◢◤╮
+  <span class="native-text"id="kolom56">
+┏󰦒󰢜╱◢◤◢◤◢◤╮
 │▎​󰝏🅢potify󰟩󰞷​󰞽 ︳
-╰╱◢◤◢◤◢◤𝄓ͦ𝄓ͮ𝄓ͤ𝄓ͬ┛</textarea>
-  <button onclick="copyToClipboard('kolom56')">⧉</button>
+╰╱◢◤◢◤◢◤𝄓ͦ𝄓ͮ𝄓ͤ𝄓ͬ┛  </span>
+  <button onclick="copyToClipboard('kolom56')">Copy ⧉</button>
 </div>
+
+
 <div class="kolom">
-  <textarea id="kolom57">󰦒▔▔▔䷓䷚䷞䷏䷗䷔󰟕󰟵
+<span class="native-text"id="kolom57">󰦒▔▔▔䷓䷚䷞䷏䷗䷔󰟕󰟵
 󰟸◤◢◤◢◤◢◤󰟺┈󰟨󰠔
 󰟱iPhoneな󰟰󰝃◢████
-▔▔▔▔▔▔▔▔▔▔▔▔▔</textarea>
-  <button onclick="copyToClipboard('kolom57')">⧉</button>
+▔▔▔▔▔▔▔▔▔▔▔▔▔</span>
+  <button onclick="copyToClipboard('kolom57')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom58">★┏┅┅┅┅┅┅┅┅┅┅┅┓★
 ⫷ﾆ⿴🄰⿴🄱⿴🄲⿴🄳⿴🄴⿴ﾆ⫸
 ★┗┅┅┅┅┅┅┅┅┅┅┅┛★</textarea>
-  <button onclick="copyToClipboard('kolom58')">⧉</button>
+  <button onclick="copyToClipboard('kolom58')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom59">┈┈┈ ▁▁⎞⧸╱
@@ -262,7 +286,7 @@ button, a, input, textarea {
 ◢◤▏◥◣▂╱╲ノ︳
 ┈┈乀░░░╲╱ノ
 ♧ⓤⓢⓔⓡ♡㍁🌺⎷</textarea>
-  <button onclick="copyToClipboard('kolom59')">⧉</button>
+  <button onclick="copyToClipboard('kolom59')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom60">ﾞﾞ　　　 ／乀ヽ＿︵ヘノ　　
@@ -275,7 +299,7 @@ button, a, input, textarea {
 　ﾞノ　　　 　　　 　　）　
 　）︵︵　＿（︵（︵（︵　
 　乀︵︵︵）　乀︵︵︵））</textarea>
-  <button onclick="copyToClipboard('kolom60')">⧉</button>
+  <button onclick="copyToClipboard('kolom60')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom61">﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏ 
@@ -283,13 +307,13 @@ button, a, input, textarea {
 （〇〪〭〫〬፠︱ＬＯＶＥツ︱፠〇〪〭〫〬）　 
 ／﹋﹋﹋ꕺꕤꗚ〇〪〭〫〬ꗚꕤꕺ﹋﹋﹋＼ 
 ﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋ </textarea>
-  <button onclick="copyToClipboard('kolom61')">⧉</button>
+  <button onclick="copyToClipboard('kolom61')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom62">ꕤϳ๏ʂɧ︢ɛᴘɩɴ乀ꕺノ＊＿﹅  乀ꕺノ 
 乀۵ꕢﷺꕢ۵ノꕺ ꕤᴀʟᴇxᴀɴᴅʀᴀꕤ 
 ꘏＿＿＿＿＿꘏ꕬꖯꕺꖀꔀꖻ㉈曰ꖩ </textarea>
-  <button onclick="copyToClipboard('kolom62')">⧉</button>
+  <button onclick="copyToClipboard('kolom62')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom63">Ｌｏｖｅ　︵ ︵ﾞ　　　　　　
@@ -301,7 +325,7 @@ button, a, input, textarea {
 　　　（﹊ﾞ＼　　＼ 　　　　
 　　（﹊ﾞ＼　　＼　ﾞ）　　　
 　（﹊ﾞ＼　　　　ﾞノ</textarea>
-  <button onclick="copyToClipboard('kolom63')">⧉</button>
+  <button onclick="copyToClipboard('kolom63')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom64">／ɭl　　　　　　　　　　　　 
@@ -314,7 +338,7 @@ button, a, input, textarea {
 　　　／＼＿＿＿＿ノ　　　　 
 　ﾞ／
 ／ﾞ</textarea>
-  <button onclick="copyToClipboard('kolom64')">⧉</button>
+  <button onclick="copyToClipboard('kolom64')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom65">　ノ　　ノ　　　　乀　　乀　
@@ -326,7 +350,7 @@ button, a, input, textarea {
 　　︳︳　　乀ノ　　　︳︳　
 　　︳乀　　　　　　ノ　︳　
 　　＼　　　　　　　　／　　</textarea>
-  <button onclick="copyToClipboard('kolom65')">⧉</button>
+  <button onclick="copyToClipboard('kolom65')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom66">一ꔷꔮꕤꔮ＼ꕺ＼﹏／ꕺ／ꔮꕤꔮꔷ一
@@ -336,7 +360,7 @@ button, a, input, textarea {
 《／〇〪〭〫〬＼》ꕺꕺꕤꕺꕺ《／〇〪〭〫〬＼》
 ꕺ﹋﹋﹋＼۵ꕢﷺꕢ۵／﹋﹋﹋ꕺ
 一ꔷꔮꕤꔮ／ꕺ／﹋＼ꕺ＼ꔮꕤꔮꔷ一</textarea>
-  <button onclick="copyToClipboard('kolom66')">⧉</button>
+  <button onclick="copyToClipboard('kolom66')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom67"> ﾞ ）　）　）　　　　　　　　
@@ -350,7 +374,7 @@ button, a, input, textarea {
 乀＿＿＿＿＿ノ　＿＿＿＿＿　
 ／＿＿＿＿＿＿＿＿＿＿＿／︳
 ︳＿＿＿＿＿＿＿＿＿＿＿︳　</textarea>
-  <button onclick="copyToClipboard('kolom67')">⧉</button>
+  <button onclick="copyToClipboard('kolom67')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom68">ﾞ　　﹏﹏　　　　﹏﹏　　
@@ -363,7 +387,7 @@ button, a, input, textarea {
 　 　 ﹋﹋ 　　 ﹋﹋﹋﹋﹋　
 ︻ཬﾃ罒ﾛ〼ﾛﾃ๏一一一一一一＊
 ＯＫＥ ＧＡＳＳＳ．．！！！</textarea>
-  <button onclick="copyToClipboard('kolom68')">⧉</button>
+  <button onclick="copyToClipboard('kolom68')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom69">＿＿（＼乀＿︵＿）／）　　Ｇ
@@ -374,7 +398,7 @@ button, a, input, textarea {
 ＿︵）︵乀＿＿＿ノ︵（︵　ｙ
 （︵︵︵ノノ︶乀乀︵︵︵）ａ
 </textarea>
-  <button onclick="copyToClipboard('kolom69')">⧉</button>
+  <button onclick="copyToClipboard('kolom69')">Copy ⧉</button>
 </div>
 <div class="kolom">
   <textarea id="kolom70">︲　　　　　人人　　　　　　
@@ -389,7 +413,7 @@ button, a, input, textarea {
 ﹍﹍﹍﹍ノ﹌﹌﹌﹌乀﹍﹍﹍﹍
 ﹍﹍ノ﹌﹌﹌﹌﹌﹌﹌﹌乀﹍﹍
 ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</textarea>
-  <button onclick="copyToClipboard('kolom70')">⧉</button>
+  <button onclick="copyToClipboard('kolom70')">Copy ⧉</button>
 </div>
 
 
@@ -400,19 +424,19 @@ button, a, input, textarea {
 ♧䷓䷚䷓䷃♡䷏䷃䷓䷃
 ✧╚══❖≛≛❖══╝
 ®⚘ꕤ ۩۞─────۞</textarea>
-    <button onclick="copyToClipboard('kolom51')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom51')">Copy ⧉</i></button>
   </div>
      <div class="kolom">
       <textarea id="kolom52">♧🅚ⓐⓡⓞ 🅑ⓞⓙⓞ⠀🎵🎶
 ─────ꔷ──── ﾛﾛ⠘ﾖﾕ
 ⏮️　　⏸️　　⏭️　⠀🔀🔄</textarea>
-    <button onclick="copyToClipboard('kolom52')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom52')">Copy ⧉</i></button>
   </div>
      <div class="kolom">
       <textarea id="kolom53">──ꔷ⬣★◥╲☠️╱◤★⬣ꔷ──
 ✶❖✶ﾆ䷏䷃䷓䷚䷞䷃䷓ﾆ✶❖✶
 ──ꔷ⬣★◢◤⚙◥◣★⬣ꔷ──</textarea>
-    <button onclick="copyToClipboard('kolom53')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom53')">Copy ⧉</i></button>
   </div>
       <div class="kolom">
        <textarea id="kolom54">┏╮╭┒▛▚▁▞▜┏╮╭┒
@@ -420,7 +444,7 @@ button, a, input, textarea {
 ╭▚▞╮▞▚▁▞▚╭▚▞╮
 ┕╯╰┙▙▞▔▚▟┕╯╰┙
 ﾓMｴNﾓM</textarea>
-    <button onclick="copyToClipboard('kolom54')">⧉</i></button>
+    <button onclick="copyToClipboard('kolom54')">Copy ⧉</i></button>
   </div>
 
   <div class="kolom">
@@ -429,7 +453,7 @@ button, a, input, textarea {
 ﾆ🆄🆂🅴🆁▇🆄🅽🅸🅺ﾆ
 ▚▄▄▄▄▄▄▄▄▞
 ❥────────◂►</textarea>
-    <button onclick="copyToClipboard('kolom5')">⧉</button>
+    <button onclick="copyToClipboard('kolom5')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom6">┈┈┈ ▁▁⎞⧸╱
@@ -438,7 +462,7 @@ button, a, input, textarea {
 ◢◤▏◥◣▂╱╲ノ︳
 ┈┈乀░░░╲╱ノ
 ♧ⓥⓘⓝⓐ♡㍁🌺⎷</textarea>
-    <button onclick="copyToClipboard('kolom6')">⧉</button>
+    <button onclick="copyToClipboard('kolom6')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom7">╰┄┄┄╮　╭┈┄┄╯
@@ -446,7 +470,7 @@ button, a, input, textarea {
 　▚▂▞▚█▞▚▂▞
 　◢▔╲◢ﾆﾆ◣╱▔◣
 ╱▚▂◤⎠◥◤⎝◥▂▞╲</textarea>
-    <button onclick="copyToClipboard('kolom7')">⧉</button>
+    <button onclick="copyToClipboard('kolom7')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom8">╰┄┄┄─╮╭─┈┄┄╯
@@ -454,28 +478,28 @@ button, a, input, textarea {
 　▚▂🟠▚█▞🟠▂▞
 　◢▔▚🟡ﾆﾆ🟡▞▔◣
 ╱▚🟥◤⎠◥◤⎝◥🟥▞╲</textarea>
-    <button onclick="copyToClipboard('kolom8')">⧉</button>
+    <button onclick="copyToClipboard('kolom8')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom9">◥██◤─◣▁◢─◥██◤
 ─◥▀█◣◥█◤◢█▀◤─
 ───◤──▼──◥───
 ✦─✦ﾆ🅑🅐🅓🅑🅞🅨ﾆ✦─✦</textarea>
-    <button onclick="copyToClipboard('kolom9')">⧉</button>
+    <button onclick="copyToClipboard('kolom9')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom10">┬☬╮◖🆅🅴🅼🆈◗ 　🂡🃞⍀♤
 ╰⚘㎯⚤✾⍻───────➛
 ╭ﾆ╰𝀀≝𝀁°®ﾆ⌢➷⍀㉣㉧㉣㋦
 ┾⚘🌺♪ꕤ───────➛</textarea>
-    <button onclick="copyToClipboard('kolom10')">⧉</button>
+    <button onclick="copyToClipboard('kolom10')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom11">゜⎞　　🪼⠀　🫧　　🫧
 °⠀✼°　🪼🪼　⠀⠀　🐠🐠
 ⎛°✼⠀🪸🦐⌢🍀🐟　　🐠
 乀ﾆ🍀°ノ𝁵🦐°⏜🪸⎞⎛🐙</textarea>
-    <button onclick="copyToClipboard('kolom11')">⧉</button>
+    <button onclick="copyToClipboard('kolom11')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom12">⠾▒▒▒ ⠾▒▒▒ ⠾▒▒▒
@@ -483,23 +507,16 @@ button, a, input, textarea {
 ⣿▓▕▓ ⣿▓▕▓ ┈┈⣿▓
 ⣿███ ⣿███ ┈┈⣿█
 USER</textarea>
-    <button onclick="copyToClipboard('kolom12')">⧉</button>
+    <button onclick="copyToClipboard('kolom12')">Copy ⧉</button>
   </div>
-  <div class="kolom">
-    <textarea id="kolom13">┈┉✿╮🔶🅹🔶╭✿┉┈
-┏╮╭┪❗🅴❗┢╮╭┓
-╰▞▚╯❗🅽❗╰▞▚╯
-╭▚▞╮❗🆈❗╭▚▞╮
-┗╯╰┹🔶ﾆﾆ🔶┺╯╰┛</textarea>
-    <button onclick="copyToClipboard('kolom13')">⧉</button>
-  </div>
+
   <div class="kolom">
     <textarea id="kolom14">♜　♞　♚　♝　♞　♜
 ⎪▞▞▞▞▞▞▞▞▞▞⎪
 🏆GRANDツMASTER🏆
 ⎪▞▞▞▞▞▞▞▞▞▞⎪
 ♖　♘　♗　♔　♘　♖</textarea>
-    <button onclick="copyToClipboard('kolom14')">⧉</button>
+    <button onclick="copyToClipboard('kolom14')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom15">゜ ◢█████◤╲
@@ -507,7 +524,7 @@ USER</textarea>
 ⎥🗾🗾🗾⎥🚪⎢🪟⎢⎥Ξ⎢
 🎄🚴┄🚴ニ██ニニﾆ▍🎄
 ┄┄┄┈┈┈┈┈┈┈┈┈┈</textarea>
-    <button onclick="copyToClipboard('kolom15')">⧉</button>
+    <button onclick="copyToClipboard('kolom15')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom16">╲⎛╭┒
@@ -517,7 +534,7 @@ USER</textarea>
 ┖╯∘⎠🌿
 𝀓╱∘𝀈
 ⎛ニ⎛🌿⎞ニ⎞</textarea>
-    <button onclick="copyToClipboard('kolom16')">⧉</button>
+    <button onclick="copyToClipboard('kolom16')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom17">╰┈─┒┎╯┎─┈╯
@@ -525,7 +542,7 @@ USER</textarea>
 ─╼Ξロ◼️⬛⬛◼️◾►
 ╱🟤╰┘▏◥███◣
 ╭┈─┚┖╮┖─┈╮</textarea>
-    <button onclick="copyToClipboard('kolom17')">⧉</button>
+    <button onclick="copyToClipboard('kolom17')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom18">──╼⭐╮⚜️╭⭐╾──
@@ -533,7 +550,7 @@ USER</textarea>
 ◈◈◈✿GﾓMｴNｴ✿◈◈◈
 ◥🟨▁◣╲🔰╱◢▁🟩◤
 ──╼⭐╯⚜️╰⭐╾──</textarea>
-    <button onclick="copyToClipboard('kolom18')">⧉</button>
+    <button onclick="copyToClipboard('kolom18')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom19">◢▀◣┄◢▀◣╭❀┉┉╮
@@ -541,7 +558,7 @@ USER</textarea>
 ◥▄█ニ█▀◣╰❀┉┉╯
 ┄┄█ニ█┄█◦▐▜ ▜
 ◥▄◤┄◥▄◤◦▐▟ ▐</textarea>
-    <button onclick="copyToClipboard('kolom19')">⧉</button>
+    <button onclick="copyToClipboard('kolom19')">Copy ⧉</button>
   </div>
 
   <div class="kolom">
@@ -550,14 +567,14 @@ USER</textarea>
 ◥◣▁🆗█◣⬮│⬮⎞
 ◢◤▔◥🆍███◤
 ┈┈┈◿ニ◸▔▔◹ﾆ◺</textarea>
-    <button onclick="copyToClipboard('kolom24')">⧉</button>
+    <button onclick="copyToClipboard('kolom24')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom25">◢▀◤💥︻ッ╦╤──╼
 █┄▐▀◣⌢➷㍁ﾆ⛹︎╮
 █▀▐▀▀▚ 🆄🆂🅴🆁
 ◤◢█▄▄▞ 🆄🅽🅸🅺</textarea>
-    <button onclick="copyToClipboard('kolom25')">⧉</button>
+    <button onclick="copyToClipboard('kolom25')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom26">┍───╮╭╮╭───┑
@@ -565,7 +582,7 @@ USER</textarea>
 ┄╰┬▚████▞┬╯
 ┄┄╰─▚██▞─╯
 ┄┄┄┄─◥◤ニﾆ</textarea>
-    <button onclick="copyToClipboard('kolom26')">⧉</button>
+    <button onclick="copyToClipboard('kolom26')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom27">▞▚ ▞▚ ●▐▜ ▜
@@ -573,34 +590,34 @@ USER</textarea>
 ▚▞ ▚▞ SECONDS
 ▃▁🝛⏍▅┯──⍻╼
 ◤▔𝀺°°°▔▔▔▔▔乀</textarea>
-    <button onclick="copyToClipboard('kolom27')">⧉</button>
+    <button onclick="copyToClipboard('kolom27')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom28">────▩╤═╤▩
 ▁▃▃⛘🆍▅▅𝄝╤╤─⍻╼━
 ⧹𝀄▔⌰°艹🁢▔▔▔▔▔/╲</textarea>
-    <button onclick="copyToClipboard('kolom28')">⧉</button>
+    <button onclick="copyToClipboard('kolom28')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom29">⛅ ╱⧸╲𝀓𝀲⧹╲
 𝀲𝀻𝀈𝁵𝀓▁🎄🏠⏜🏡
 🎄━🚴‍♂️━╍🚴‍♀️╍╍┅┉┉┉
 ﾆ🅂🄴🄻🄰🄼🄰🅃 🄿🄰🄶🄸ﾆ🎄</textarea>
-    <button onclick="copyToClipboard('kolom29')">⧉</button>
+    <button onclick="copyToClipboard('kolom29')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom30">🥨╲🧚╭ꕤ🅹ꕤ╮🧚╱🥨
 ❗█⚔️│ꕤ🅴ꕤ│⚔️█❗
 ❗█⚔️│ꕤ🅽ꕤ│⚔️█❗
 🧡╱🧚╰ꕤ🆈ꕤ╯🧚╲🧡</textarea>
-    <button onclick="copyToClipboard('kolom30')">⧉</button>
+    <button onclick="copyToClipboard('kolom30')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom31">⛅𝂕 𝃉 𝂕
 ﹍ ﹍ ╱🌾🌾🌾╱﹍🦆
 ﹍ ╱🌾🌾🌾╱🦆𝂕ﾆ🦆
 ╱🌾🌾🌾╱🦆🦆ﾆ🦆</textarea>
-    <button onclick="copyToClipboard('kolom31')">⧉</button>
+    <button onclick="copyToClipboard('kolom31')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom32">┈┈┈▞▔▚╭🌺╯
@@ -610,34 +627,34 @@ USER</textarea>
 ▙▂▞▞▔▚▚▂▟
 ┈┈┈▚▂▞🌿
 USER</textarea>
-    <button onclick="copyToClipboard('kolom32')">⧉</button>
+    <button onclick="copyToClipboard('kolom32')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom33">🅤🅢🅔🅡🅢󱢏🦇🏴‍☠️⏧℻㏺➧✯︎
 ⎝⚈⎞⋆⎛⚆⎠📨🎭 🅄🅂🄴🅁🇸🇨
 ▂ン㔔⌥✪▰▰▰━───╼💥
 ◖📟◗⏧✆──🝛㏇㎯🝎㏒🆈🆃➧</textarea>
-    <button onclick="copyToClipboard('kolom33')">⧉</button>
+    <button onclick="copyToClipboard('kolom33')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom34">──╼⭐╮ ⚜️ ╭⭐╾──
 ⚜️🌺⚜️⏜⎞🪷⎛⏜⚜️🌺⚜️
 ╰⎛💧⎞°🅚🅘🅝🅔🅔°⎛💧⎞╯
 ⚜️🌺⚜️ニ⎝❤️⎠ニ⚜️🌺⚜️ </textarea>
-    <button onclick="copyToClipboard('kolom34')">⧉</button>
+    <button onclick="copyToClipboard('kolom34')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom35">┬™╮ⓊⓈⒺⓇ♡  ⎝メ⏝◢⎠ 
 ╰⚘ⒻⒷⒾ✾⍻──────➛
 ─🅄🄽🄸🄺╰®⠹ ➷♥㉣㋾
  ⎝メ⏝◢⎠ ⠀───━☢ナ︻</textarea>
-    <button onclick="copyToClipboard('kolom35')">⧉</button>
+    <button onclick="copyToClipboard('kolom35')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom36">🦄🪽𝁘𝀈　👑⚘࿇⍻──➛
 ╭𝁘𝀍𝁐𝁽𝁘⎝⠀⫹⫺🅺🅸🅽🅶⫹⫺
 🅢🅦🅞🅡🅓⚔️𝀍 ──━ナ︻</textarea>
-    <button onclick="copyToClipboard('kolom36')">⧉</button>
+    <button onclick="copyToClipboard('kolom36')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom37">▛▔▚▞▔▚▞▔▜
@@ -646,7 +663,7 @@ USER</textarea>
 ▚┈╱▔▇▔╲┈▞
 ┈▚▂▂▂▂▂▞
 NAME</textarea>
-    <button onclick="copyToClipboard('kolom37')">⧉</button>
+    <button onclick="copyToClipboard('kolom37')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom38">⪪⪼─⟢⨷⟣─⪻⪫
@@ -654,7 +671,7 @@ NAME</textarea>
 ◂ﾆ🟩🅄🅂🄴🅁🟩ﾆ▸
 ⫹⫺──⫹⫺──⫹⫺
 ⪪⪼─⟢⨷⟣─⪻⪫</textarea>
-    <button onclick="copyToClipboard('kolom38')">⧉</button>
+    <button onclick="copyToClipboard('kolom38')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom39">◢▛▔▜◣┈┈◢▛▔▜◣
@@ -662,7 +679,7 @@ NAME</textarea>
 ┈┈▟█▙▚▞▟█▙
 ▞▔▜██████▛▔▚
 ┈┈▞▔▞▔▔▚▔▚ﾆﾆ</textarea>
-    <button onclick="copyToClipboard('kolom39')">⧉</button>
+    <button onclick="copyToClipboard('kolom39')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom40">⛅𝂕⠀⠀𝂕　人
@@ -670,33 +687,33 @@ NAME</textarea>
 ◢██◣▇☐▇◢██◣
 ▓▛▜▓▇☐▇▓▛▜▓　
 ♜▁▂▃會𝄛𝄛會▃▂▁♜</textarea>
-    <button onclick="copyToClipboard('kolom40')">⧉</button>
+    <button onclick="copyToClipboard('kolom40')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom41">▉▞ ▉ █▜ ▛▜ 🆄🆂🅴🆁♧
 █▚ ▉ █▐ ▙█ 🂼⍀⩇⩇⦂⩇⩉
 ®⍀ 💥ﾆ🄰🄺🅄🄽ﾆ🅄🄽🄸🄺
 </textarea>
-    <button onclick="copyToClipboard('kolom41')">⧉</button>
+    <button onclick="copyToClipboard('kolom41')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom42">╰🌼╮⎝⍀⚆🜳⚆҂⎠╭🌼╯
 ◄ﾆ⊠🄵🄰🄲🄴🄱🄾🄾🄺⊠ﾆ►
 ╭🌼╯⎝⍀⚆🜳⚆҂⎠╭🌼╮</textarea>
-    <button onclick="copyToClipboard('kolom42')">⧉</button>
+    <button onclick="copyToClipboard('kolom42')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom43">✮ﾑﾕﾓﾒﾑ🈀🛡️✪➻────✪➻
 ╭♥️♣️╮│🂱 ⎛▔▔▔▔❦╮
 ╰♠️♦️╯╰⚝⎝҂⚆⏝⚆⍀⎠╯
 ╭◉⌥㏒㍴㍁✪➻────✪➻</textarea>
-    <button onclick="copyToClipboard('kolom43')">⧉</button>
+    <button onclick="copyToClipboard('kolom43')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom44">🅝🅐🅜🅔🅢♼⎷╰⛨⍀⋆🈀♧😈
 💥❥━─────────╼❥
 🛠️⚙️㍁ﾆﾆ⎞⚝╮🅓🅐🅡🅚ⓕⓑ</textarea>
-    <button onclick="copyToClipboard('kolom44')">⧉</button>
+    <button onclick="copyToClipboard('kolom44')">Copy ⧉</button>
   </div>
   <div class="kolom">
     <textarea id="kolom45">╭➖➖➖╮
@@ -707,16 +724,16 @@ NAME</textarea>
 ├🔡🔽🔢┤
 ╰➖➖➖╯
 ﾆ🄽🄾🄺🄸🄰ﾆ</textarea>
-    <button onclick="copyToClipboard('kolom45')">⧉</button>
+    <button onclick="copyToClipboard('kolom45')">Copy ⧉</button>
   </div>
-  <div class="kolom">
-    <textarea id="kolom46">󰠊 GﾓMｴNｴ　󰠂󱡘󰎅
+
+<div class="kolom">
+<span class="native-text"id="kolom46">󰠊 GﾓMｴNｴ　󰠂󱡘󰎅
 󰎎　󰎍　󰎈　󰎃　󰎆
 ──────────
-FﾑCﾓB✪✪K  󰍸 󰍺 󰎐</textarea>
-    <button onclick="copyToClipboard('kolom46')">⧉</button>
-
-
+FﾑCﾓB✪✪K  󰍸 󰍺 󰎐</span>
+  <button onclick="copyToClipboard('kolom46')">Copy ⧉</button>
+</div>
 <script>
 function copyToClipboard(id) {
   const source = document.getElementById(id);
@@ -751,7 +768,7 @@ function copyToClipboard(id) {
     style.textContent = `
       #copy-message {
         position: fixed;
-        top: 30%;
+        top: 50%;
         left: 50%;
         font-size: 15px;
         transform: translate(-50%, -50%);
@@ -823,4 +840,3 @@ function copyToClipboard(id) {
   }, 2000);
 }
 </script>
-
